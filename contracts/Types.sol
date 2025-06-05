@@ -9,7 +9,7 @@ contract Types1 {
     bool public boolean2; // default false
     uint public myUint1 = 1; // cannot be negative!
     uint public myUint2; // defaults to 0
-    uint256 public myUint3 = 1; // same as uint
+    uint256 public myUint3 = 1; // same as uint!
     uint8 public myUint4 = 1;
     uint16 public myUint5 = 1;
     int public myInt1 = 1;
