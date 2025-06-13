@@ -55,7 +55,7 @@ contract Variables4 {
     }
 }
 
-// Global vairables: this, msg, tx, block
+// Global variables: this, msg, tx, block
 // https://docs.soliditylang.org/en/v0.8.16/cheatsheet.html?highlight=global%20variables#global-variables
 contract Variables5 {
     address public contractAddress;
