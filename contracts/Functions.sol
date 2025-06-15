@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 
 // Read functions are free
-// Write functions cost gass
+// Write functions cost gas
 // Write function with arguments
 // Write functions without arguments
 contract Functions1 {
@@ -23,14 +23,13 @@ contract Functions1 {
     }
 }
 
-
 // Functions can call other functions
 // Only public functions are visible outside the contract
 contract Functions2 {
     uint public count;
 
     function increment() public {
-        count = add(count, 1);
+        count++;
     }
 
     function add(uint a, uint b) internal pure returns(uint) {
@@ -62,7 +61,7 @@ contract Functions4 {
     uint public count;
 
     function increment1() public {
-        count = count + 1;
+        count++;
     }
 
     function increment2() public {
@@ -83,14 +82,14 @@ contract Functions4 {
     // You cannot call this function inside another function.
     // It won't even compile.
     function increment5() external {
-        count = count + 1;
+        count++;
     }
 
     // You cannot call this outside the contract
     // You *can* call this from another function
     // You *can* call this from an inherited contract
     function increment6() internal {
-        count = count + 1;
+        count++;
     }
 
     function increment7() public {

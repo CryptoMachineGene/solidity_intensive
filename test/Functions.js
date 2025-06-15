@@ -89,7 +89,7 @@ describe('Functions', () => {
       expect(await contract.count()).to.equal(1)
     })
 
-    it('can call a public from another function', async () => {
+    it('can call a public function from another function', async () => {
       await contract.increment2()
       expect(await contract.count()).to.equal(1)
     })
