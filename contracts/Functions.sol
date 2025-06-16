@@ -107,14 +107,14 @@ contract Functions5 {
 
     // View
     // You *cannot* modify state (e.g. change name)
-    // You *can* accesss sate (e.g. read name)
+    // You *can* accesss state (e.g. read name)
     function getName() public view returns(string memory) {
         return name;
     }
 
     // Pure
     // You *cannot* modify state (e.g. change name)
-    // You *cannot* accesss sate (e.g. read name)
+    // You *cannot* accesss state (e.g. read name)
     function add(uint a, uint b) public pure returns(uint) {
         return a + b;
     }
