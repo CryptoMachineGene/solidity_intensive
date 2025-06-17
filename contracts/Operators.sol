@@ -36,7 +36,7 @@ contract Operators1 {
     }
 
     function decrement(uint a) external pure returns(uint) {
-        a --;
+        a--;
         return a;
     }
 
