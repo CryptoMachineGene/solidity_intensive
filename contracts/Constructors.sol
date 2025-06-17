@@ -67,4 +67,3 @@ contract Constructors6 is Parent2 {
         description = _description;
     }
 }
-
