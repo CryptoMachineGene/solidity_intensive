@@ -5,9 +5,9 @@ import "hardhat/console.sol";
 
 // Mapping examples (key value pairs)
 contract Mappings1 {
-    mapping(uint => string) public names; // Mapping of string like a databse
-    mapping(uint => address) public addresses; // Mapping of string like a databse
-    mapping(address => uint) public balances; // Mapping of string like a databse
+    mapping(uint => string) public names; // Mapping of string like a database
+    mapping(uint => address) public addresses; // Mapping of string like a database
+    mapping(address => uint) public balances; // Mapping of balances for each address
     mapping(address => bool) public hasVoted; // Tracks whether a user has voted
 
     // Add values to the mapping in the constructor
