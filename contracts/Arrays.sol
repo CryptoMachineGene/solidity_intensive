@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 
 // Array initalization
-// Homework: try more data types!
+// Homework: Try more data types!
 contract Arrays1 {
     uint[] public array1 = [1, 2, 3];
     uint[] public array2; // this initializes an array of uints
@@ -14,18 +14,17 @@ contract Arrays1 {
     string[10] public array6; // this initializes a fixed size array of 10 uints, default to ""
 }
 
-
 // Array functions
 // Homework: try manipulating more arrays & data types
 contract Arrays2 {
     uint[] public array;
 
-    // Get value at a given index
+    // Gets value at a given index
     function get(uint i) public view returns (uint) {
         return array[i];
     }
 
-    // Return the whole array
+    // Returns the whole array
     function getArray() public view returns (uint[] memory) {
         return array;
     }
@@ -44,7 +43,7 @@ contract Arrays2 {
         array.pop();
     }
 
-    // Remove item at given index
+    // Removes item at given index
     function remove(uint index) public {
         delete array[index];
     }

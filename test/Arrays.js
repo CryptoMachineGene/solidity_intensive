@@ -50,21 +50,21 @@ describe('Arrays', () => {
       // Check length after
       expect(await contract.length()).to.equal(3)
 
-      // Get the whole array
+      // Gets the whole array
       let array = await contract.getArray()
       expect(array[0]).to.equal(1)
       expect(array[1]).to.equal(2)
       expect(array[2]).to.equal(3)
 
-      // Read items from contract
+      // Reads items from contract
       expect(await contract.array(0)).to.equal(1)
       expect(await contract.get(0)).to.equal(1)
 
-      // Remove last item
+      // Removes last item
       await contract.pop()
       expect(await contract.length()).to.equal(2)
 
-      // Delete first item
+      // Deletes first item
       await contract.remove(0)
       expect(await contract.length()).to.equal(2) // preserves length
       expect(await contract.array(0)).to.equal(0) // resets to default value
