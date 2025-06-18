@@ -15,10 +15,7 @@ describe('Time Examples', () => {
 
       // Configure time
       let now = await time.latest()
-
-      // Uncomment this to see the current timestamp
-      // console.log(now)
-
+          
       let depositStartTime = now + 1000 // add 1,000 seconds
 
       let withdrawStartTime = now + 2000 // add 2,000 seconds
@@ -33,21 +30,20 @@ describe('Time Examples', () => {
       // Advance time past deposit start time + 1 second
       await time.increaseTo(depositStartTime + 1);
 
-      // Desposit
+      // Deposit
       await contract.deposit({ value: ether(1) })
       expect(await ethers.provider.getBalance(contract.address)).to.equal(ether(1))
 
-      // Try to withrwaw
+      // Try to withdraw
       await expect(contract.withdraw()).to.be.reverted
 
       // Advance time past withdraw start time + 1 second
       await time.increaseTo(withdrawStartTime + 1);
 
-      // Desposit
+      // Withdraw
       await contract.withdraw()
       expect(await ethers.provider.getBalance(contract.address)).to.equal(ether(0))
 
     })
-
   })
 })

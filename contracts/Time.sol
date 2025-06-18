@@ -3,6 +3,7 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
+// Time example
 contract Time1 {
     address public owner;
     uint public depositStartTime;
@@ -37,5 +38,4 @@ contract Time1 {
         (bool sent, ) = owner.call{value: value}("");
         require(sent);
     }
-
 }
