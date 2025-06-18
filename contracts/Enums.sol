@@ -3,8 +3,12 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-// Structs
+// Enums
 contract Enums1 {
+
+    // Todo: 0
+    // InProgress: 1
+    // Done: 2
     enum Status {
         Todo,
         InProgress,
@@ -14,9 +18,6 @@ contract Enums1 {
     // Defaults to first item, e.g., "Todo"
     Status public status;
 
-    // Todo: 0
-    // InProgress: 1
-    // Done: 2
     function get() public view returns (Status) {
         return status;
     }
@@ -31,7 +32,7 @@ contract Enums1 {
         status = Status.Done;
     }
 
-    // Resets to default value, i.e., Todo or 0
+    // Resets to default value, in other words, Todo or 0
     function reset() public {
         delete status;
     }
