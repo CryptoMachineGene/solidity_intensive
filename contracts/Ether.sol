@@ -27,10 +27,10 @@ contract Ether3 {
     // called as "fallback" if receive() not implemented
     // You can also execute business logic inside these functions
     fallback() external payable {
-        count ++;
+        count++;
     }
 
-    // Shows how to get Ether blance of current contract, .i.e., "this"
+    // Shows how to get Ether blance of current contract, in other words, "this"
     function checkBalance() public view returns (uint) {
         return address(this).balance;
     }
