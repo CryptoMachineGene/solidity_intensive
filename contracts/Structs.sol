@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-// Structs
+// Structs example
 contract Structs1 {
     struct Book {
         string title;
@@ -27,7 +27,6 @@ contract Structs1 {
         book.title = _title;
         book.author = _author;
         // completed is "false" by default
-
         books.push(book);
     }
 
@@ -40,7 +39,7 @@ contract Structs1 {
         return (book.title, book.author, book.completed);
     }
 
-    // update completed
+    // update completed status
     function complete(uint _index) public {
         Book storage book = books[_index];
         book.completed = true;
