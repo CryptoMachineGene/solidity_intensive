@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-// Structs
+// Events
 contract Events1 {
     string public message = "Hello World";
 

@@ -39,6 +39,11 @@ describe('Events', () => {
       let firstEvent = eventStream[0]
       expect(firstEvent.args[1]).to.equal('Hey!')
 
+      let secondEvent = eventStream[1]
+      expect(secondEvent.args[1]).to.equal('Ho!')
+
+      let thirdEvent = eventStream[2]
+      expect(thirdEvent.args[1]).to.equal('Ha!')
 
       // Trigger event from user 2
       transaction = await contract.connect(user2).updateMessage('Huh!')
@@ -53,8 +58,7 @@ describe('Events', () => {
       // Homework: check other parameters
       firstEvent = eventStream[0]
       expect(firstEvent.args[1]).to.equal('Huh!')
-
+      expect(firstEvent.args[0]).to.equal(user2.address)
     })
   })
-
 })
