@@ -36,4 +36,3 @@ contract Errors1 {
         emit Log("success");
     }
 }
-

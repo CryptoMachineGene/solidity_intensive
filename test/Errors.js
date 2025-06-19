@@ -10,7 +10,7 @@ const ether = tokens
 describe('Errors', () => {
 
   describe('Example 1', () => {
-    it('deomonstrates error handling', async () => {
+    it('demonstrates error handling', async () => {
       // Deploy contract with time settings
       const Contract = await ethers.getContractFactory('Errors1')
       contract = await Contract.deploy()
@@ -29,6 +29,5 @@ describe('Errors', () => {
       await expect(contract.example4(5)).to.be.reverted
       await expect(contract.example4(20)).to.be.fulfilled
     })
-
   })
 })
