@@ -21,7 +21,6 @@ describe('Interactions', () => {
       expect(await contract.getSecret()).to.equal('Secret')
       await contract.setSecret('New Secret')
       expect(await contract.getSecret()).to.equal('New Secret')
-
     })
   })
 
@@ -45,5 +44,4 @@ describe('Interactions', () => {
       expect(await token.balanceOf(contract.address)).to.equal(tokens(1000000))
     })
   })
-
 })

@@ -5,6 +5,7 @@ import "hardhat/console.sol";
 
 // https://docs.soliditylang.org/en/v0.8.16/contracts.html?highlight=inheritance#inheritance
 
+// example smart contract to show interactions fo contracts
 contract SecretVault {
     string private secret;
 
