@@ -5,6 +5,7 @@ import "hardhat/console.sol";
 
 // https://docs.soliditylang.org/en/v0.8.16/contracts.html?highlight=inheritance#inheritance
 
+// Stuff to inherit to another contract
 contract Ownable {
     address owner;
 
@@ -22,7 +23,7 @@ contract Inheritance1 is Ownable {
     string public name = "Example 1";
 
     // Constructor is inherited from parent
-    // Ownalbe modifier inherited from parent
+    // Ownable modifier inherited from parent
 
     function setName(string memory _name) public onlyOwner {
         name = _name;
@@ -35,7 +36,7 @@ contract Payable {
 }
 
 contract Inheritance2 is Ownable, Payable {
-    // Inerits ownership from Ownable
+    // Inherits ownership from Ownable
     // Inherits deposit functionality from Payable
 
     // Withdraws ether funds from the contract
